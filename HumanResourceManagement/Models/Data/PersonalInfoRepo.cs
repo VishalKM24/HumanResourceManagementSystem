@@ -29,5 +29,26 @@ namespace HumanResourceManagement.Models.Data
                 db.PersonalInformations.Remove(dt);
             db.SaveChanges();
         }
+
+        public List<PersonalInformation> AllInfo()
+        {
+            return db.PersonalInformations.ToList();
+        }
+
+        public PersonalInformation getInfoById(int id)
+        {
+            var data = db.PersonalInformations.Find(id);
+
+            if (data == null)
+                return null;
+
+            return data;
+        }
+
+        public void Update(PersonalInformation person)
+        {
+            db.Entry(person).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+        }
     }
 }

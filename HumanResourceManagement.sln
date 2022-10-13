@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32922.545
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumanResourceManagement", "HumanResourceManagement\HumanResourceManagement.csproj", "{8D7F3207-901F-4C4D-A370-1273E746B89D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodOrder", "FoodOrder\FoodOrder.csproj", "{8A5C5F4A-C1E4-4F19-8555-3D064C857DAE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{8D7F3207-901F-4C4D-A370-1273E746B89D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D7F3207-901F-4C4D-A370-1273E746B89D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D7F3207-901F-4C4D-A370-1273E746B89D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A5C5F4A-C1E4-4F19-8555-3D064C857DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A5C5F4A-C1E4-4F19-8555-3D064C857DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A5C5F4A-C1E4-4F19-8555-3D064C857DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A5C5F4A-C1E4-4F19-8555-3D064C857DAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

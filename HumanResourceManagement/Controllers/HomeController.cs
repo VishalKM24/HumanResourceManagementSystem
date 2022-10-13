@@ -10,13 +10,11 @@ namespace HumanResourceManagement.Controllers
 {
     public class HomeController : Controller
     {
-        private HumanResourceDbContext db = new HumanResourceDbContext();
-
         private IPersonalInfoRepo personalInfoRepo = new PersonalInfoRepo();
         
         public ActionResult Index()
         {
-            var catagories = db.PersonalInformations.ToList();
+            var catagories = personalInfoRepo.AllInfo();
             return View(catagories);
         }
 
@@ -51,13 +49,19 @@ namespace HumanResourceManagement.Controllers
 
 
         [HttpGet]
-        public ActionResult Edit()
+        public ActionResult Edit(int id)
         {
-            return View();
+            var categories = personalInfoRepo.getInfoById(id);
+            return View(categories);
         }
         [HttpPost]
         public ActionResult Edit(PersonalInformation person)
         {
+            if (!ModelState.IsValid)
+                return View("About");
+
+            personalInfoRepo.Update(person);
+            TempData["Message"] = $"The data got update for {person.PersonalID} {person.firstName} {person.lastName}";
             return View();
         }
 
